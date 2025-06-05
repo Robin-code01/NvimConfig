@@ -6,3 +6,9 @@ require("config.lazy")
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+
+-- Yank into system clipboard with <leader>y in normal mode:
+vim.api.nvim_set_keymap('n', '<leader>y', '"+y', { noremap = true, silent = true })
+
+-- Yank in visual mode into system clipboard:
+vim.api.nvim_set_keymap('v', '<leader>y', '"+y', { noremap = true, silent = true })
