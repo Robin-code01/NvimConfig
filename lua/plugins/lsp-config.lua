@@ -1,23 +1,27 @@
 return {
 	{
 		"mason-org/mason.nvim",
+    lazy = false,
 		config = function()
 			require("mason").setup()
 		end,
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "pylsp" },
-			})
-		end,
+    lazy = false,
+    opts = { auto_install = true, },
+--		config = function()
+--			require("mason-lspconfig").setup({
+--				ensure_installed = { "lua_ls", "clangd", "pylsp" },
+--			})
+--		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
+    lazy = false,
 		config = function()
-			local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local lspconfig = require("lspconfig")
 
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.clangd.setup({ capabilities = capabilities })
@@ -28,13 +32,13 @@ return {
 			vim.diagnostic.config({
 				virtual_text = {
 					prefix = "●", -- Could also be '●', '■', '▶', ''
-					spacing = 4,
-					-- severity = vim.diagnostic.severity.ERROR, -- optional: show only errors inline
-				},
-				signs = true,
-				underline = true,
-				update_in_insert = false,
-				severity_sort = true,
+			spacing = 4,
+			-- severity = vim.diagnostic.severity.ERROR, -- optional: show only errors inline
+		},
+		signs = true,
+		underline = true,
+		update_in_insert = false,
+		severity_sort = true,
 			})
 		end,
 	},
