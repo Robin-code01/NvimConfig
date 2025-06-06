@@ -18,4 +18,6 @@ vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, silent = true })
 vim.keymap.set('v', '<C-a>', 'ggVG', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-a>', 'ggVG', { noremap = true, silent = true })
 
-
+-- To delete an entore word when i do Ctrl+Backspace
+vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true, silent = true })
+vim.keymap.set("c", "<C-BS>", "<C-W>", { noremap = true, silent = true })
