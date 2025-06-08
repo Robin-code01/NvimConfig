@@ -1,0 +1,2 @@
+lua/extension/LLVM/bin/clang-tidy filter=lfs diff=lfs merge=lfs -text
+debuggers/cpptools/lua/extension/LLVM/bin/clang-tidy filter=lfs diff=lfs merge=lfs -text
