@@ -10,11 +10,11 @@ return {
 		"mason-org/mason-lspconfig.nvim",
     lazy = false,
     opts = { auto_install = true, },
---		config = function()
---			require("mason-lspconfig").setup({
---				ensure_installed = { "lua_ls", "clangd", "pylsp" },
---			})
---		end,
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = { "lua_ls", "clangd", "pylsp", "nil", "eslint_d", "html-lsp", "css-lsp" },
+			})
+		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
