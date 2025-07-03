@@ -12,7 +12,7 @@ return {
     opts = { auto_install = true, },
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "pylsp", "nil", "eslint_d", "html-lsp", "css-lsp" },
+				ensure_installed = { "lua_ls", "clangd", "pylsp", "nil", "eslint_d", "html-lsp", "cssls" },
 			})
 		end,
 	},
